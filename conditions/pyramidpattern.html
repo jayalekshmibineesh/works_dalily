@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PYRAMID PATTERN
+
+    </title>
+</head>
+<body>
+    
+    <script>
+        let n=5;
+        string="";
+        for(let i=1;i<=n;i++)
+        {
+
+        for( let j=n;j>i;j--)
+          //for( let j=1;j<=n;j++)
+        {
+           string+=" ";
+        }
+
+           for(let k=0;k<2*i-1;k++)
+             {
+              string+="*";
+             }
+             string+="<br>";               
+        }
+        // string+="<br>" ;  
+        
+        document.write(`<pre>${string}</pre>`);
+        
+    </script>
+</body>
+</html>

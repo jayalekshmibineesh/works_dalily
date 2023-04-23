@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <input type="text" id="tb1">  
+  <input type="text" id ="tb2">
+
+  <input type="text" id="tb3"> <br> <br>
+
+
+  <button onclick="OPR()">submit </button> <br><br>
+
+  <input type="text" id="tb4">
+   
+<script>
+    function OPR()
+    {
+
+     let a,b,c;
+     a=Number(document.getElementById("tb1").value);
+     b=Number(document.getElementById("tb2").value);
+     c=document.getElementById("tb3").value;
+
+     //d= document.getElementById("tb4").value
+
+    
+
+    switch(c)
+    {
+              //alert(c);
+        
+     case "+":
+         c=a+b;
+    //alert(c)
+       break;
+
+     case "-":
+
+          c=a-b;
+      break;
+
+     case "*": 
+
+          c=a*b;
+      break;
+
+      case "/": 
+
+         c=a/b;
+       break;
+
+       default:
+           c="something went wrong" ;
+    }
+
+    document.getElementById("tb4").value= c;
+}
+</script>
+
+</body>
+</html>

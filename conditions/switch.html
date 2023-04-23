@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>system date using switch</title>
+</head>
+<body>
+   <input type="text" id="num1">
+
+    <button onclick="switch1()"> day</button>
+   <!-- <p id="demo"></p>-->
+    <script>
+        
+           function switch1()
+         {
+            let day;
+          day= Number(document.getElementById("num1").value);
+         // document.getElementById("demo").innerHTML=day;
+
+                       
+       switch(new Date().getDay()) 
+       {
+        case 0:
+            day="Sunday"
+            break;
+        case 1:
+            day= "monday"
+            break;
+        case 2:    
+        day="tuesday"
+           break;
+        case 3:
+        day= "wednesday"
+           break;
+        case 4:
+         day="thursday"
+           break;
+        case  5:
+         day="friday"
+           break;
+         case 6:
+         day=" Saturday"
+            break;
+        default:
+         day= "looking forward to the weekend"
+       }
+
+       document.getElementById("num1").value=day;
+ //document.getElementById("demo").innerHTML=day;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get value fron,textbox</title>
+</head>
+<body>
+      
+         <input type="text" id="num"> 
+    
+        <input type="text" id ="num1">
+                           
+                           
+        <input type="text" id="dis"> 
+        <br> <br>
+     
+          
+    <table>
+    <tr> <td> <button onclick="add()" style="background-color: blueviolet;border-radius: 30px;">Add</button></td>
+         <td><button onclick="subtract()"> subtract</button> </td>
+   <td> <button onclick="multiply()">multiply</button></td>
+   <td> <button onclick="division()">division</button></td> </tr>
+</table>
+
+ 
+   <!-- <p id="display"></p>-->
+</body>
+<script>
+     function add()
+     {
+        var a,b,c;
+         a=Number(document.getElementById("num").value);
+        b= Number(document.getElementById("num1").value);
+        c=a+b;
+
+        document.getElementById("dis").value=a+b;
+       // document.getElementById("display").innerHTML=a+b;
+        
+             
+     }
+function subtract()
+{
+    var a,b,c;
+         a=Number(document.getElementById("num").value);
+        b= Number(document.getElementById("num1").value);
+
+   c = a-b ;
+   document.getElementById("dis").value=a-b;
+    document.getElementById("display").innerHTML=a-b;
+        
+}
+function multiply()
+{
+    
+    var a,b,c;
+         a=Number(document.getElementById("num").value);
+        b= Number(document.getElementById("num1").value);
+
+   c = a*b ;
+   document.getElementById("dis").value=a*b;
+    document.getElementById("display").innerHTML=a-b;
+}
+
+function division()
+{
+    
+    var a,b,c;
+         a=Number(document.getElementById("num").value);
+        b= Number(document.getElementById("num1").value);
+
+     c = a/b ;
+   document.getElementById("dis").value=a/b;
+    document.getElementById("display").innerHTML=a/b;
+}
+
+
+     
+</script>
+</html>

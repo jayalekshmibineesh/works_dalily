@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Validation</title>
+</head>
+<body><!-- javasceipt validation-->
+    <form action="">
+   <label for=""> first Name</label> <input type="text" id="fname" placeholder="Enter name" onkeyup="clearmsg('sp1')"> 
+     <span style="color: red;" id="sp1"></span><br><br>
+ 
+   <label for=""> Last Name</label> <input type="text" id="lname" placeholder="entrer last Name" onkeyup="clearmsg('sp2')"> 
+    <span style="color: red;"id="sp2"></span><br> <br>
+
+   <label for=""> Occupation </label> <input type="text" id="occ" placeholder="Enter Occupation" onkeyup="clearmsg('sp3')">
+   <span style="color: red;" id="sp3"></span>
+    <br><br>
+   <label for=""> Address </label> <input type="text" id="addr"   placeholder="Enter your address" onkeyup="clearmsg('sp4')"> 
+   <span style="color: red;" id="sp4"></span><br>
+
+   <label for=""> contact</label> <input type="text" id="contact" placeholder="Enter contact number" pattern="[0-9]{10}" onkeyup="clearmsg('sp5')">
+   <span style="color: red;"id="sp5"></span> <br>
+   <label for=""> Email</label> <input type="email" id="email" placeholder="Enter your email id" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])" onkeyup="clearmsg('sp6')" >
+   <span style="color: red; "id="sp6"></span>
+   <br><br>
+
+   <button onclick="return validation ()"> submit</button>
+</form>
+
+<script>
+
+    function validation()
+    { 
+        var fname=document.getElementById("fname").value;
+        var lname=document.getElementById("lname").value;
+        var occ=document.getElementById("occ").value;
+        var addr=document.getElementById("addr").value;
+        var contact=document.getElementById("contact").value;
+        var email=document.getElementById("email").value;
+        
+        if(fname==""){
+        document.getElementById("sp1").innerHTML="enter your Name";
+          return false;
+        }
+      
+      if(lname==false)
+      {
+        document.getElementById("sp2").innerHTML="Enter last name";
+        return false;
+      }
+      
+      if(occ=="")
+      {
+        document.getElementById("sp3").innerHTML="enter your Occupation"
+        return false;
+
+      }
+      if(addr=="")
+      {
+        document.getElementById("sp4").innerHTML="Enter your address"
+        return false;
+
+      }
+      if(contact=="")
+      {
+      document.getElementById("sp5").innerHTML=" Enter your contsct Number"
+      return false;
+      }
+       if( email=="")
+       {
+        document.getElementById("sp6").innerHTML="Enter your email id"
+        return false;
+       }
+      }
+       
+ function clearmsg(sp)
+
+{  
+document.getElementById(sp).innerHTML="";
+}
+
+
+</script>
+</body>
+</html>   

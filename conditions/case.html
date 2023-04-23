@@ -1,0 +1,59 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISPLAY FRUITS NAME</title>
+</head>
+<body>
+     <input type="text" id="tb1"> <br> <br>
+     <button onclick="fruit1()">FRUIT</button><br>
+     <br>
+     <input type="text" id="tb2">
+     
+
+     <p id="demo"></p>
+     <script>
+       function fruit1()
+       {
+         var tb1,tb2;
+
+         tb1=document.getElementById("tb1").value;
+        
+         //alert(tb1)
+         tb2=document.getElementById("tb2").value;
+
+         let fruit;
+        // fruitt=document.getElementById(tb1).value;
+
+         //fruits = document.getElementById("tb1")
+
+          switch(tb1)
+          {
+            case "A":
+             fruit = "apple ";
+            break;
+            case "B":
+             fruit = "bannana" ;
+            break;
+            case "C":
+             fruit =" orange";
+              break;
+             case "D":
+              fruit = "grape";
+           default:
+              fruit = "Others"; 
+          } 
+                document.getElementById("tb2").value= fruit;
+    
+       //document.getElementById("tb2").value= fruits;
+       //document.getElementById(tb2).value=fruits
+        //document.getElementById("demo").innerHTML=tb1,value;
+          
+
+       }
+
+     </script>
+</body>
+</html>
